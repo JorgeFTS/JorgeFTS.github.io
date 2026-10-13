@@ -12,7 +12,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #111318;
     --band: #1b1e25;
     --surface: #242832;
@@ -163,3 +163,57 @@ h2.left::after { display: none; }
 .btn-dark.disabled { opacity: .85; cursor: default; }
 .project .tags li { background: transparent; border: 0; padding: 0; font-weight: 700; }
 .project .tags li:not(:last-child)::after { content: " -"; }
+
+:root[data-theme="dark"] {
+  --bg: #111318;
+  --band: #1b1e25;
+  --surface: #242832;
+  --text: #e8eaee;
+  --muted: #a3a9b5;
+  --border: #2a2f38;
+  --accent: #8b87ff;
+  --accent-text: #0f1115;
+}
+
+/* Navegación con botones y tema */
+.nav ul { align-items: center; }
+.btn-nav, .theme {
+  display: inline-block; padding: .3rem .9rem; border: 2px solid var(--text); border-radius: 6px;
+  color: var(--text) !important; background: transparent; font: inherit; font-size: .9rem; text-decoration: none; cursor: pointer;
+}
+.btn-nav:hover, .theme:hover { border-color: var(--accent); color: var(--accent) !important; }
+.theme { font-size: 1.1rem; line-height: 1; border-color: transparent; }
+.site-header { background: var(--band); border-bottom: 0; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+.hero { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; margin-top: 0; }
+.hero.container { width: 100%; }
+.fullname { text-align: center; text-transform: uppercase; font-weight: 400; }
+.center { text-align: center; }
+.more { font-weight: 500; }
+#sobre-mi p:not(.center) { text-align: justify; }
+
+/* Redes: fijas a la izquierda en pantallas anchas */
+.social-side { display: none; }
+@media (min-width: 1000px) {
+  .social-inline { display: none; }
+  .social-side {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    position: fixed; left: 1.25rem; bottom: 0; margin: 0; z-index: 4;
+  }
+  .social-side .line { width: 2px; height: 6rem; background: var(--text); }
+}
+.nav.container { max-width: 1200px; }
+
+/* Franjas grises de lado a lado en Stack y Contacto */
+#stack, #contacto { background: var(--band); box-shadow: 0 0 0 100vmax var(--band); clip-path: inset(0 -100vmax); padding-bottom: 3rem; }
+#contacto { margin-top: 3rem; }
+.big { font-size: clamp(2rem, 6vw, 2.8rem); }
+.big::after { display: none; }
+.tiles { justify-content: center; }
+.tiles li { background: var(--band); }
+.stack { justify-items: center; text-align: center; }
+.group { width: 100%; }
+@media (min-width: 700px) {
+  .projects { grid-template-columns: repeat(2, 1fr); }
+  .tiles { grid-template-columns: repeat(auto-fill, 150px); }
+}
+.stack { grid-template-columns: 1fr; }

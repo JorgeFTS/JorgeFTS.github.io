@@ -25,11 +25,10 @@
     <nav class="container nav" aria-label="Principal">
       <a class="brand" href="#inicio">JT</a>
       <ul>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#en-progreso">En progreso</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="btn-nav" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="btn-nav" href="#proyectos">Proyectos</a></li>
+        <li><a class="btn-nav" href="#contacto">Contacto</a></li>
+        <li><button class="theme" id="theme" type="button" aria-label="Cambiar tema">◐</button></li>
       </ul>
     </nav>
   </header>
@@ -40,20 +39,27 @@
       <h1>Estudiante de Ingeniería de Software</h1>
       <p class="lead">Backend, QA y camino a DevOps. Busco prácticas pre-profesionales.</p>
       <div class="actions">
-        <a class="btn primary" href="#proyectos">Ver proyectos</a>
-        <a class="btn" href="assets/cv-jorge-taipe.pdf" download>Descargar CV</a>
+        <a class="btn" href="#contacto">Conéctate conmigo</a>
       </div>
-      <p class="social">
+      <p class="social social-inline">
         <a href="https://github.com/JorgeFTS" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.200 1.800 1.200 1 1.800 2.700 1.300 3.400 1 .1-.8.4-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.200c0 .4.2.7.8.6A11.500 11.500 0 0 0 23.500 12 11.500 11.500 0 0 0 12 .5z"/></svg></a>
         <a href="https://linkedin.com/in/jorge-taipe-sangama-411b2834b/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M20.400 20.500h-3.600v-5.600c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900v5.700H9.300V9h3.400v1.600c.5-.9 1.600-1.800 3.400-1.800 3.600 0 4.300 2.400 4.300 5.500zM5.300 7.400a2.100 2.100 0 1 1 0-4.200 2.100 2.100 0 0 1 0 4.200zM7.100 20.500H3.600V9h3.500zM22.200 0H1.800C.8 0 0 .8 0 1.700v20.600c0 .9.8 1.700 1.800 1.700h20.400c1 0 1.800-.8 1.800-1.700V1.700C24 .8 23.200 0 22.200 0z"/></svg></a>
       </p>
     </section>
 
+    <aside class="social social-side" aria-label="Redes">
+      <a href="https://github.com/JorgeFTS" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.200 1.800 1.200 1 1.800 2.700 1.300 3.400 1 .1-.8.4-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.200c0 .4.2.7.8.6A11.500 11.500 0 0 0 23.500 12 11.500 11.500 0 0 0 12 .5z"/></svg></a>
+      <a href="https://linkedin.com/in/jorge-taipe-sangama-411b2834b/" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M20.400 20.500h-3.600v-5.600c0-1.300 0-3-1.800-3s-2.100 1.400-2.100 2.900v5.700H9.300V9h3.400v1.600c.5-.9 1.600-1.800 3.400-1.800 3.600 0 4.300 2.400 4.300 5.500zM5.300 7.400a2.100 2.100 0 1 1 0-4.200 2.100 2.100 0 0 1 0 4.200zM7.100 20.500H3.600V9h3.500zM22.200 0H1.800C.8 0 0 .8 0 1.700v20.600c0 .9.8 1.700 1.800 1.700h20.400c1 0 1.800-.8 1.800-1.700V1.700C24 .8 23.200 0 22.200 0z"/></svg></a>
+      <span class="line" aria-hidden="true"></span>
+    </aside>
+
     <section id="sobre-mi" class="container">
       <h2>Sobre mí</h2>
+      <h3 class="fullname">Jorge Francisco Taipe Sangama</h3>
       <!-- Borrador: ajústalo con tus palabras -->
       <p>Estudio Ingeniería de Software en la UPC (Perú) desde 2023. Me gusta construir backends bien organizados y comprobar que funcionan con pruebas.</p>
       <p>Aún no tengo experiencia laboral, por eso aquí muestro proyectos reales y qué hice yo en cada uno. Ahora estoy aprendiendo Cloud y DevOps con Azure: contenedores, pipelines e infraestructura como código.</p>
+      <p class="center"><a class="more" href="assets/cv-jorge-taipe.pdf" download>Descargar CV →</a></p>
     </section>
 
     <section id="stack" class="container">
@@ -124,7 +130,8 @@
     </section>
 
     <section id="contacto" class="container">
-      <h2>Contacto</h2>
+      <h2 class="big">¡Conectemos!</h2>
+      <p class="center">Si quieres saber más sobre mí o mi trabajo, o solo saludar, escríbeme. Me encantará leerte.</p>
       <ul class="contact">
         <li><a href="https://linkedin.com/in/jorge-taipe-sangama-411b2834b/" rel="noopener">LinkedIn</a></li>
         <li><a href="https://github.com/JorgeFTS" rel="noopener">GitHub</a></li>

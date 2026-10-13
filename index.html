@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Taipe · Ingeniería de Software · Backend, QA y DevOps</title>
+  <meta name="description" content="Portafolio de Jorge Francisco Taipe Sangama, estudiante de Ingeniería de Software en UPC. Busco prácticas en backend, QA y DevOps/Cloud.">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://jorgefts.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph para compartir en LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jorge Taipe · Backend, QA y DevOps">
+  <meta property="og:description" content="Estudiante de Ingeniería de Software. Proyectos reales en backend, QA y camino a DevOps.">
+  <meta property="og:url" content="https://jorgefts.github.io/">
+  <!-- TODO: og:image (1200x630) cuando exista assets/img/og.png -->
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Principal">
+      <a class="brand" href="#inicio">JT</a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#en-progreso">En progreso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="inicio" class="hero container">
+      <p class="eyebrow">Jorge Francisco Taipe Sangama</p>
+      <h1>Estudiante de Ingeniería de Software. Backend, QA y camino a DevOps.</h1>
+      <p class="lead">Busco prácticas pre-profesionales donde pueda aportar con código y aprender de un equipo.</p>
+      <div class="actions">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <!-- TODO: agregar assets/cv-jorge-taipe.pdf; mientras no exista, el botón queda oculto -->
+        <a class="btn" href="assets/cv-jorge-taipe.pdf" id="btn-cv" hidden download>Descargar CV</a>
+        <a class="btn" href="https://linkedin.com/in/jorge-taipe-sangama-411b2834b/" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/JorgeFTS" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="container">
+      <h2>Sobre mí</h2>
+      <!-- Borrador: ajústalo con tus palabras -->
+      <p>Estudio Ingeniería de Software en la UPC (Perú) desde 2023. Me gusta construir backends bien organizados y comprobar que funcionan con pruebas.</p>
+      <p>Aún no tengo experiencia laboral, por eso aquí muestro proyectos reales y qué hice yo en cada uno. Ahora estoy aprendiendo Cloud y DevOps con Azure: contenedores, pipelines e infraestructura como código.</p>
+    </section>
+
+    <section id="stack" class="container">
+      <h2>Stack</h2>
+      <div class="grid stack">
+        <div class="card">
+          <h3>Backend</h3>
+          <ul class="tags"><li>Java</li><li>Spring Boot</li><li>C# / .NET</li><li>Python / FastAPI</li></ul>
+        </div>
+        <div class="card">
+          <h3>Frontend</h3>
+          <ul class="tags"><li>Angular</li><li>Vue 3</li></ul>
+        </div>
+        <div class="card">
+          <h3>Datos</h3>
+          <ul class="tags"><li>MySQL</li></ul>
+        </div>
+        <div class="card">
+          <h3>Calidad y DevOps <small>(aprendiendo)</small></h3>
+          <ul class="tags"><li>Docker</li><li>GitHub Actions</li><li>Azure</li><li>Terraform</li><li>xUnit</li><li>Playwright</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="container">
+      <h2>Proyectos</h2>
+      <div class="grid projects">
+
+        <article class="card project featured">
+          <div class="project-head">
+            <h3>ChambaPro</h3>
+            <span class="status wip">En desarrollo</span>
+          </div>
+          <p>Plataforma que conecta clientes con técnicos: búsqueda, contratación, agenda de reservas y reseñas.</p>
+          <ul class="tags">
+            <li>Vue 3</li><li>Vite</li><li>PrimeVue</li><li>Pinia</li><li>.NET 9</li><li>EF Core</li><li>MySQL</li><li>JWT</li><li>DDD / CQRS</li>
+          </ul>
+          <!-- TODO: confirmar si lo hice solo o en equipo, y ajustar "Mi aporte" -->
+          <p class="aporte"><strong>Mi aporte:</strong> ahora estoy agregando Docker, CI/CD con GitHub Actions, tests y despliegue en Azure con Terraform.</p>
+          <!-- TODO: enlaces a repo y demo cuando sean públicos y estén limpios -->
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>NursePulse</h3>
+            <span class="status wip">En desarrollo</span>
+          </div>
+          <p>Backend de gestión clínica hecho en equipo (Spring Boot, MySQL, JWT, métricas con Prometheus y Grafana). La app original es de un equipo.</p>
+          <ul class="tags">
+            <li>Spring Boot</li><li>MySQL</li><li>JWT</li><li>Prometheus</li><li>Grafana</li><li>Azure</li>
+          </ul>
+          <p class="aporte"><strong>Mi aporte:</strong> la capa DevOps: contenedores, pipeline, despliegue en Azure e infraestructura como código.</p>
+          <!-- TODO: enlace al repo cuando exista -->
+        </article>
+
+        <!-- TODO: hasta 3 proyectos de la universidad (candidatos: Foundly, SpacePulse, Trazza); solo con repo y aporte claro -->
+      </div>
+    </section>
+
+    <section id="en-progreso" class="container">
+      <h2>En progreso</h2>
+      <ol class="timeline">
+        <li><strong>ChambaPro DevOps</strong> Docker, CI/CD y tests.</li>
+        <li><strong>NursePulse en Azure</strong> contenedores, pipeline e infraestructura como código.</li>
+        <li><strong>Certificación AZ-900</strong> fundamentos de Azure.</li>
+      </ol>
+    </section>
+
+    <section id="contacto" class="container">
+      <h2>Contacto</h2>
+      <ul class="contact">
+        <li><a href="https://linkedin.com/in/jorge-taipe-sangama-411b2834b/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/JorgeFTS" rel="noopener">GitHub</a></li>
+        <!-- TODO: confirmar el correo a mostrar y agregarlo aquí como mailto: -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="anio">2026</span> Jorge Taipe Sangama</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

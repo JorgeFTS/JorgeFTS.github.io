@@ -1,23 +1,23 @@
 /* Variables: modo claro por defecto, oscuro según el sistema */
 :root {
-  --bg: #ffffff;
-  --surface: #f5f6f8;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
   --text: #1a1d23;
   --muted: #555b66;
   --border: #dfe2e8;
-  --accent: #1d4ed8;
+  --accent: #4f46e5;
   --accent-text: #ffffff;
   --max: 860px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1115;
-    --surface: #181b21;
+    --bg: #111318;
+    --surface: #1b1e25;
     --text: #e8eaee;
     --muted: #a3a9b5;
     --border: #2a2f38;
-    --accent: #6ea0ff;
+    --accent: #8b87ff;
     --accent-text: #0f1115;
   }
 }
@@ -30,7 +30,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
   line-height: 1.6;
 }
 
@@ -123,3 +123,20 @@ a:focus-visible, .btn:focus-visible {
 .footer p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Estilo centrado tipo terminal */
+h2 { text-align: center; font-size: 1.75rem; margin-bottom: 1.5rem; }
+h2::after { content: ""; display: block; width: 3rem; height: 3px; background: var(--accent); margin: .6rem auto 0; }
+.hero { text-align: center; padding-top: 4rem; padding-bottom: 3rem; }
+.hero .lead { margin-left: auto; margin-right: auto; }
+.greeting { font-size: clamp(1.3rem, 4vw, 1.8rem); margin: 0 0 .75rem; }
+.actions { justify-content: center; }
+.btn { text-transform: uppercase; font-size: .85rem; letter-spacing: .04em; border: 2px solid var(--text); }
+.btn.primary { border-color: var(--text); background: transparent; color: var(--text); }
+.btn:hover, .btn.primary:hover { border-color: var(--accent); color: var(--accent); }
+.social { display: flex; justify-content: center; gap: 1.25rem; margin: 1.5rem 0 0; }
+.social a { color: var(--text); }
+.social a:hover { color: var(--accent); }
+.tags { justify-content: flex-start; }
+.status.private { border-color: var(--border); }
+.contact { justify-content: center; }

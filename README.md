@@ -2,7 +2,7 @@
 
 Sitio personal en HTML, CSS y JavaScript puro. Sin build ni dependencias.
 
-Sitio publicado: https://jorgefts.github.io/Portafolio/
+Sitio publicado: https://jorgefts.github.io/
 
 ## Correr en local
 

@@ -9,12 +9,15 @@ const es = {
   connect: "Conéctate conmigo", about_h: "Sobre mí",
   about_p1: "Estudio Ingeniería de Software en la UPC (Perú) desde 2023. Me gusta construir backends bien organizados y comprobar que funcionan con pruebas.",
   about_p2: "Aún no tengo experiencia laboral, por eso aquí muestro proyectos reales y qué hice yo en cada uno. Ahora estoy aprendiendo Cloud y DevOps con Azure: contenedores, pipelines e infraestructura como código.",
-  cv: "Descargar CV →", stack_h: "Stack.", g_backend: "Backend", g_frontend: "Frontend", g_data: "Datos",
+  cv: "Descargar CV →", stack_h: "Stack.", g_backend: "Backend", g_frontend: "Frontend y móvil", g_data: "Datos",
   g_devops: "Calidad y DevOps", learning: "(aprendiendo)", projects_h: "Proyectos.", wip: "En desarrollo",
   cp_desc: "Plataforma que conecta clientes con técnicos: búsqueda, contratación, agenda de reservas y reseñas.",
   contrib: "Mi aporte:",
   cp_contrib: "proyecto propio. Ahora estoy agregando Docker, CI/CD con GitHub Actions, tests y despliegue en Azure con Terraform.",
-  private: "Repo privado",
+  private: "Repo privado", repo: "Ver repo",
+  mn_desc: "Conversor de archivos para Linux con una rueda radial en Nautilus. Más de 250 conversiones, todo corre en tu máquina. Beta 0.1.0.",
+  mn_contrib: "proyecto propio: la app, los conversores y el paquete .deb.",
+  mn_video: "Demo de Mandarina: eliges un archivo, escoges un formato en la rueda y aparece el archivo convertido",
   np_desc: "Backend de gestión clínica hecho en equipo (Spring Boot, MySQL, JWT, métricas con Prometheus y Grafana). La app original es de un equipo.",
   np_contrib: "la capa DevOps: contenedores, pipeline, despliegue en Azure e infraestructura como código.",
   wip_h: "En progreso.", t1: "Docker, CI/CD y tests.", t2h: "NursePulse en Azure",
@@ -40,6 +43,10 @@ nodos.forEach((n) => { n.dataset.en = n.textContent; });
 
 function setLang(lang) {
   nodos.forEach((n) => { n.textContent = lang === "es" ? es[n.dataset.i18n] : n.dataset.en; });
+  document.querySelectorAll("[data-i18n-aria]").forEach((n) => {
+    n.dataset.enAria = n.dataset.enAria || n.getAttribute("aria-label");
+    n.setAttribute("aria-label", lang === "es" ? es[n.dataset.i18nAria] : n.dataset.enAria);
+  });
   document.documentElement.lang = lang;
   document.title = meta[lang].title;
   document.querySelector('meta[name="description"]').content = meta[lang].desc;
@@ -67,3 +74,8 @@ document.getElementById("theme").addEventListener("click", () => {
   raiz.dataset.theme = oscuro ? "light" : "dark";
   try { localStorage.setItem("tema", raiz.dataset.theme); } catch (e) {}
 });
+
+// Sin movimiento: el video de la demo no se reproduce solo
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("video").forEach((v) => { v.autoplay = false; v.pause(); v.controls = true; });
+}

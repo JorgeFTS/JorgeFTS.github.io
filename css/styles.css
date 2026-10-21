@@ -217,3 +217,10 @@ h2.left::after { display: none; }
   .tiles { grid-template-columns: repeat(auto-fill, 150px); }
 }
 .stack { grid-template-columns: 1fr; }
+
+/* Casillas con logo */
+.tiles li { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; padding: 1rem .5rem; }
+.tiles img { width: 48px; height: 48px; background: #fff; border-radius: 8px; padding: 2px; }
+.project-media { width: 100%; height: auto; border-radius: 6px; margin-bottom: .75rem; background: #000; }
+a.btn-dark:hover, a.btn-dark:focus-visible { background: var(--accent); color: var(--accent-text); }
+.projects { align-items: start; }

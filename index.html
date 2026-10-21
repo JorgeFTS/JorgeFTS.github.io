@@ -68,19 +68,42 @@
       <div class="stack">
         <div class="group">
           <h3 data-i18n="g_backend">Backend</h3>
-          <ul class="tiles"><li>Java</li><li>Spring Boot</li><li>C# / .NET</li><li>Python / FastAPI</li></ul>
+          <ul class="tiles">
+            <li><span>Java</span></li>
+            <li><img src="assets/img/skills/springboot.webp" alt="" width="48" height="48" loading="lazy"><span>Spring Boot</span></li>
+            <li><img src="assets/img/skills/csharp.webp" alt="" width="48" height="48" loading="lazy"><span>C#</span></li>
+            <li><img src="assets/img/skills/dotnet.webp" alt="" width="48" height="48" loading="lazy"><span>.NET</span></li>
+            <li><img src="assets/img/skills/python.webp" alt="" width="48" height="48" loading="lazy"><span>Python / FastAPI</span></li>
+            <li><span>Rust</span></li>
+          </ul>
         </div>
         <div class="group">
-          <h3 data-i18n="g_frontend">Frontend</h3>
-          <ul class="tiles"><li>Angular</li><li>Vue 3</li></ul>
+          <h3 data-i18n="g_frontend">Frontend &amp; Mobile</h3>
+          <ul class="tiles">
+            <li><img src="assets/img/skills/angular.webp" alt="" width="48" height="48" loading="lazy"><span>Angular</span></li>
+            <li><img src="assets/img/skills/vue.webp" alt="" width="48" height="48" loading="lazy"><span>Vue 3</span></li>
+            <li><img src="assets/img/skills/flutter.webp" alt="" width="48" height="48" loading="lazy"><span>Flutter</span></li>
+          </ul>
         </div>
         <div class="group">
           <h3 data-i18n="g_data">Data</h3>
-          <ul class="tiles"><li>MySQL</li></ul>
+          <ul class="tiles">
+            <li><img src="assets/img/skills/mysql.webp" alt="" width="48" height="48" loading="lazy"><span>MySQL</span></li>
+            <li><img src="assets/img/skills/postgresql.webp" alt="" width="48" height="48" loading="lazy"><span>PostgreSQL</span></li>
+          </ul>
         </div>
         <div class="group">
           <h3><span data-i18n="g_devops">Quality and DevOps</span> <small data-i18n="learning">(learning)</small></h3>
-          <ul class="tiles"><li>Docker</li><li>GitHub Actions</li><li>Azure</li><li>Terraform</li><li>xUnit</li><li>Playwright</li></ul>
+          <ul class="tiles">
+            <li><img src="assets/img/skills/docker.webp" alt="" width="48" height="48" loading="lazy"><span>Docker</span></li>
+            <li><img src="assets/img/skills/github.webp" alt="" width="48" height="48" loading="lazy"><span>GitHub Actions</span></li>
+            <li><img src="assets/img/skills/azure.webp" alt="" width="48" height="48" loading="lazy"><span>Azure</span></li>
+            <li><span>Terraform</span></li>
+            <li><img src="assets/img/skills/xunit.webp" alt="" width="48" height="48" loading="lazy"><span>xUnit</span></li>
+            <li><img src="assets/img/skills/playwright.webp" alt="" width="48" height="48" loading="lazy"><span>Playwright</span></li>
+            <li><img src="assets/img/skills/selenium.webp" alt="" width="48" height="48" loading="lazy"><span>Selenium</span></li>
+            <li><img src="assets/img/skills/jira.webp" alt="" width="48" height="48" loading="lazy"><span>Jira</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -101,6 +124,22 @@
           <p class="aporte"><strong data-i18n="contrib">My contribution:</strong> <span data-i18n="cp_contrib">my own project. I'm now adding Docker, CI/CD with GitHub Actions, tests and deployment to Azure with Terraform.</span></p>
           <!-- TODO: cambiar por enlaces a repo y demo cuando sean públicos y estén limpios -->
           <span class="btn-dark disabled" data-i18n="private">Private repo</span>
+        </article>
+
+        <article class="card project">
+          <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/img/mandarina-poster.webp" width="720" height="406" aria-label="Mandarina demo: select a file, pick a format on the wheel and the converted file appears" data-i18n-aria="mn_video">
+            <source src="assets/video/mandarina-demo.mp4" type="video/mp4">
+          </video>
+          <div class="project-head">
+            <h3>Mandarina</h3>
+            <span class="status wip" data-i18n="wip">In development</span>
+          </div>
+          <p data-i18n="mn_desc">Linux file converter with a radial wheel in Nautilus. 250+ conversions, everything runs on your machine. Beta 0.1.0.</p>
+          <ul class="tags">
+            <li>Rust</li><li>Tauri 2</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+          </ul>
+          <p class="aporte"><strong data-i18n="contrib">My contribution:</strong> <span data-i18n="mn_contrib">my own project: the app, the converters and the .deb package.</span></p>
+          <a class="btn-dark" href="https://github.com/JorgeFTS/Mandarina" rel="noopener" data-i18n="repo">View repo</a>
         </article>
 
         <article class="card project">

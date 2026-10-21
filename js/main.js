@@ -17,6 +17,7 @@ const es = {
   private: "Repo privado", repo: "Ver repo", done: "Terminado",
   cy_desc: "App móvil que conecta MYPEs con jóvenes para cubrir turnos de emergencia. Proyecto de equipo en la UPC.",
   cy_contrib: "Scrum Master de un equipo de 5 personas. Hice la landing page y, en la app Android en Kotlin, view models, repositorios y varias pantallas. También tengo una versión en Flutter.",
+  cy_video: "Video de presentación de ChambaYA",
   landing: "Landing page", android: "Repo Android", flutter: "Repo Flutter",
   mn_desc: "Conversor de archivos para Linux con una rueda radial en Nautilus. Más de 250 conversiones, todo corre en tu máquina. Beta 0.1.0.",
   mn_contrib: "proyecto propio: la app, los conversores y el paquete .deb.",

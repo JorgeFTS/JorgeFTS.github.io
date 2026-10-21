@@ -23,7 +23,7 @@ const es = {
   mn_contrib: "proyecto propio: la app, los conversores y el paquete .deb.",
   mn_video: "Demo de Mandarina: eliges un archivo, escoges un formato en la rueda y aparece el archivo convertido",
   np_desc: "Backend de gestión clínica hecho en equipo (Spring Boot, MySQL, JWT, métricas con Prometheus y Grafana). La app original es de un equipo.",
-  np_contrib: "la capa DevOps: contenedores, pipeline, despliegue en Azure e infraestructura como código.",
+  np_contrib: "la capa DevOps: pipeline CI/CD con GitHub Actions, backend desplegado en Render y frontend en Vercel, variables de entorno y secrets, MySQL en Aiven y monitoreo de disponibilidad con UptimeRobot.",
   wip_h: "En progreso.", t1: "Docker, CI/CD y tests.", t2h: "NursePulse en Azure",
   t2: "contenedores, pipeline e infraestructura como código.", t3h: "Certificación AZ-900", t3: "fundamentos de Azure.",
   connect_h: "¡Conectemos!",

@@ -235,3 +235,8 @@ a.btn-dark:hover, a.btn-dark:focus-visible { background: var(--accent); color: v
 /* Avatar sin marco */
 .avatar { border: 0; border-radius: 0; max-width: 220px; }
 @media (min-width: 800px) { .about { grid-template-columns: 220px 1fr; } }
+
+.links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.status.done { color: #166534; border-color: #166534; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status.done { color: #86efac; border-color: #86efac; } }
+:root[data-theme="dark"] .status.done { color: #86efac; border-color: #86efac; }

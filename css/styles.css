@@ -240,3 +240,6 @@ a.btn-dark:hover, a.btn-dark:focus-visible { background: var(--accent); color: v
 .status.done { color: #166534; border-color: #166534; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status.done { color: #86efac; border-color: #86efac; } }
 :root[data-theme="dark"] .status.done { color: #86efac; border-color: #86efac; }
+
+.cv-links { display: flex; justify-content: center; align-items: baseline; gap: 1.25rem; flex-wrap: wrap; }
+.more.small { font-size: .85rem; color: var(--muted); }

@@ -9,7 +9,7 @@ const es = {
   connect: "Conéctate conmigo", about_h: "Sobre mí",
   about_p1: "Estudio Ingeniería de Software en la UPC (Perú) desde 2023. Me gusta construir backends bien organizados y comprobar que funcionan con pruebas.",
   about_p2: "Aún no tengo experiencia laboral, por eso aquí muestro proyectos reales y qué hice yo en cada uno. Ahora estoy aprendiendo Cloud y DevOps con Azure: contenedores, pipelines e infraestructura como código.",
-  cv: "Descargar CV →", stack_h: "Stack.", g_backend: "Backend", g_frontend: "Frontend y móvil", g_data: "Datos",
+  cv_view: "Ver CV →", cv_dl: "Descargar", stack_h: "Stack.", g_backend: "Backend", g_frontend: "Frontend y móvil", g_data: "Datos",
   g_devops: "Calidad y DevOps", learning: "(aprendiendo)", projects_h: "Proyectos.", wip: "En desarrollo",
   cp_desc: "Plataforma que conecta clientes con técnicos: búsqueda, contratación, agenda de reservas y reseñas.",
   contrib: "Mi aporte:",
@@ -51,6 +51,7 @@ function setLang(lang) {
     n.dataset.enAria = n.dataset.enAria || n.getAttribute("aria-label");
     n.setAttribute("aria-label", lang === "es" ? es[n.dataset.i18nAria] : n.dataset.enAria);
   });
+  document.getElementById("cv-view").href = document.getElementById("cv-dl").href = "assets/cv-jorge-taipe-" + lang + ".pdf";
   document.documentElement.lang = lang;
   document.title = meta[lang].title;
   document.querySelector('meta[name="description"]').content = meta[lang].desc;
